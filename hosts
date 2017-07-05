@@ -1,0 +1,12 @@
+[wjc]
+60.206.137.156 ansible_ssh_user=root
+[test]
+172.17.17.190 ansible_ssh_user=root
+172.17.17.191 ansible_ssh_user=root
+
+[test90]
+172.17.17.190 ansible_ssh_user=root
+[test91]
+172.17.17.191 ansible_ssh_user=root
+[myaliyun]
+www.wangxiyang.com ansible_ssh_user=root

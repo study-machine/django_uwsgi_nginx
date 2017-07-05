@@ -1,0 +1,20 @@
+---
+- hosts: test91
+  gather_facts: false
+
+  tasks:
+#    - name: Archive media directory
+#      archive:
+#        path: /mnt/media
+#        dest: /mnt/media/media.tgz
+#      delegate_to: www.wangxiyang.com
+
+    - name: 'Unarchive media.tgz to {{ nginx_conf.media_path }}'
+      unarchive:
+        src: http://www.wangxiyang.com/media/media.tgz
+        dest: '{{ nginx_conf.media_path }}'
+        remote_src: yes
+
+
+
+

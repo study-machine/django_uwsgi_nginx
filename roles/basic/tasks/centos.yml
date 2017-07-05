@@ -1,0 +1,30 @@
+---
+- name: Install dependencies for Centos
+  yum:
+    name: '{{ item }}'
+    state: installed
+    update_cache: yes
+  with_items:
+      - xz
+      - git
+      - zlib
+      - zlib-devel
+      - gcc
+      - gcc-c++
+      - patch
+      - readline
+      - readline-devel
+      - libyaml-devel
+      - libffi-devel
+      - openssl-devel
+      - make
+      - bzip2
+      - bzip2-devel
+      - autoconf
+      - automake
+      - libtool
+      - bison
+      - curl
+      - sqlite
+      - sqlite-devel
+  become: true

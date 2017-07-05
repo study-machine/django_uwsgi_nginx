@@ -1,0 +1,11 @@
+---
+
+- name: Start nginx
+  service:
+    name: nginx
+    state: started
+
+
+- name: Start uwsgi by supervisor
+  command: '{{ custom_venv }}/bin/supervisord
+   -c {{ my_workplace }}/conf/{{ project_name }}_supervisor.conf'

@@ -1,0 +1,22 @@
+---
+
+- name: 'Copy virtualenv-{{ virtualenv_version }}'
+  copy:
+    src: 'virtualenv-{{ virtualenv_version }}.tar.gz'
+    dest: '/tmp/virtualenv-{{ virtualenv_version }}.tar.gz'
+
+- name: 'Extract virtualenv-{{ virtualenv_version }}'
+  unarchive:
+    src: '/tmp/virtualenv-{{ virtualenv_version }}.tar.gz'
+    dest: /tmp
+    copy: no
+    creates: '/tmp/virtualenv-{{ virtualenv_version }}/setup.py'
+
+- name: 'Install virtualenv-{{ virtualenv_version }}'
+  shell: '{{ python_path }}/bin/python /tmp/virtualenv-{{ virtualenv_version }}/setup.py install'
+  args:
+    chdir: '/tmp/virtualenv-{{ virtualenv_version }}/'
+    creates: '{{ python_path }}/lib/python2.7/site-packages/virtualenv-{{ virtualenv_version }}-py2.7.egg'
+  register: debug_venv
+
+- debug: var=debug_venv

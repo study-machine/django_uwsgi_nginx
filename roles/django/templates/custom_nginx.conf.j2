@@ -1,0 +1,24 @@
+server {
+listen      {{ nginx_conf.listen }};
+# the domain name it will serve for
+server_name {{ nginx_conf.server_name }} ; # substitute your machine's IP address or FQDN
+charset     utf-8;
+
+# max upload size
+client_max_body_size 75M;   # adjust to taste
+
+# Django media
+location /media  {
+    alias {{ nginx_conf.media_path }}/;  # 指向django的media目录
+}
+
+location /static {
+    alias {{ nginx_conf.static_path }}/; # 指向django的static目录
+}
+
+# Finally, send all non-media requests to the Django server.
+location / {
+    uwsgi_pass  127.0.0.1:{{ nginx_conf.uwsgi_pass_port }};
+    include     uwsgi_params; # the uwsgi_params file you installed
+}
+}

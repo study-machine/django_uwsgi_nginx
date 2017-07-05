@@ -1,0 +1,23 @@
+---
+
+# 添加国内pip源
+- name: Check for ~/.pip/pip.conf
+  stat:
+    path: '~/.pip/pip.conf'
+  ignore_errors: true
+  register: pip_conf_dir
+
+- block:
+  - name: Create base directory
+    file:
+      path: ~/.pip
+      state: directory
+    become: true
+
+  - name: Add pip.conf to PATH
+    template:
+      src: pip.conf.j2
+      dest: ~/.pip/pip.conf
+    become: true
+
+  when: pip_conf_dir.stat.exists == false

@@ -1,0 +1,6 @@
+---
+
+- name: Manually create the initial virtualenv
+  command: '{{ python_path }}/bin/virtualenv {{ custom_venv }} -p {{ python_path }}/bin/python2.7'
+  args:
+    creates: '{{ custom_venv }}'

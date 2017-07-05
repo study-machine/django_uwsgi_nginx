@@ -1,0 +1,6 @@
+---
+
+- include: install_mysql.yml
+- include: init_mysql.yml
+- include: database_user.yml
+- include: dump_import_mysqldb.yml

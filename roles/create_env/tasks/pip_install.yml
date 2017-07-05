@@ -1,0 +1,6 @@
+---
+
+- name: pip install
+  pip:
+    name: ansible
+    virtualenv: '{{ custom_venv }}'

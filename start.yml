@@ -1,0 +1,12 @@
+---
+
+- hosts: test90
+  remote_user: root
+
+  roles:
+    - role: basic
+    - role: python
+    - role: create_env
+    - role: mysql
+    - role: nginx_uwsgi_supervisor
+    - role: django

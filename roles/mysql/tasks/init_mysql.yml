@@ -1,0 +1,24 @@
+---
+
+- name: Start the mysql services
+  service: name=mysqld state=started enabled=yes
+
+# mysql安装后，初始用户root无密码，需要设置密码.ansible如果不指定login_user,默认为root
+- name: update mysql root password for all root accounts
+  mysql_user: name=root host={{ item }} password={{ mysql_root_password }}
+  with_items:
+   - '%'
+   - 127.0.0.1
+   - localhost
+
+# ansible需要指定路径下存放mysql的登录用户名和密码
+# 然而我决定使用mysqldb模块中的login_user,login_password
+# - name: copy .my.cnf file with root password credentials
+#   template: src=.my.cnf.j2 dest=~/.my.cnf mode=0600
+
+- name: Open 3306 for iptables
+  command: '{{ item }}'
+  with_items:
+    - /sbin/iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+    - /etc/rc.d/init.d/iptables save
+    - /etc/init.d/iptables restart

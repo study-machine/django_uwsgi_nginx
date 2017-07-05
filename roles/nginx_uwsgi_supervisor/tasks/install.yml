@@ -1,0 +1,28 @@
+---
+
+- name: Install nginx 
+  yum: 
+    name: nginx
+  become: yes
+
+- name: 'Install uwsgi and supervisor into {{ custom_venv }}'
+  pip:
+    name: '{{ item }}'
+    virtualenv: '{{ custom_venv }}'
+  with_items:
+    - uwsgi
+    - supervisor
+
+- name: Open iptables port 80 9001
+  command: '{{ item }}'
+  with_items:
+    - /sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+    - /sbin/iptables -I INPUT -p tcp --dport 9001 -j ACCEPT
+    - /etc/rc.d/init.d/iptables save
+    - /etc/init.d/iptables restart
+
+#- name: Set nginx's main conf
+#  templates:
+#    src: nginx.conf.j2
+#    dest: /etc/nginx/nginx.conf
+#    force: yes

@@ -1,0 +1,8 @@
+---
+
+- include: set_server_config.yml
+- include: git_update.yml
+- include: django_settings.yml
+- include: run_project.yml
+- include: migrate_django_media.yml
+- include: set_selinux.yml

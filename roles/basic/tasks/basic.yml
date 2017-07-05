@@ -1,0 +1,45 @@
+---
+
+# 创建工程目录
+- name: 'Create work place "{{ my_workplace }}"'
+  file:
+    path: '{{ item }}'
+    state: directory
+  with_items:
+    - '{{ my_workplace }}'
+    - '{{ my_workplace }}/tmp'
+    - '{{ my_workplace }}/conf'
+    - '{{ my_workplace }}/virtual'
+    - '{{ my_workplace }}/etc'
+
+# ansible部分功能需要远端安装libselinux-python
+- name: Install libselinux-python
+  yum: 
+    name: libselinux-python
+    update_cache: yes
+  become: yes
+
+# 更换yum源，Base仓库和Epel仓库
+- name: Check repo.back
+  stat:
+    path: /etc/yum.repos.d/CentOS-Base.repo.backup
+  ignore_errors: true
+  register: repo_back_dir
+
+- block:
+  - name: Back origin CentOS-Base.repo
+    copy: 
+      remote_src: True
+      src: /etc/yum.repos.d/CentOS-Base.repo
+      dest: /etc/yum.repos.d/CentOS-Base.repo.backup
+  - name: Copy aliyun CentOS-Base
+    copy:
+      src: Centos-6.repo
+      dest: /etc/yum.repos.d/CentOS-Base.repo
+      force: yes
+  - name: Copy aliyun yum epel-repo
+    copy:
+      src: epel-Aliyun.repo
+      dest: /etc/yum.repos.d/epel-Aliyun.repo
+  when: repo_back_dir.stat.exists == false
+

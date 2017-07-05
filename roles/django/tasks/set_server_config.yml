@@ -1,0 +1,22 @@
+---
+
+- name: 'Conf nginx for {{ project_name }}'
+  template:
+    src: custom_nginx.conf.j2
+    dest: '/etc/nginx/conf.d/{{ project_name }}_nginx.conf'
+    force: true
+  become: true
+
+- name: 'Conf uwsgi for {{ project_name }}'
+  template:
+    src: custom_uwsgi.ini.j2
+    dest: '{{ my_workplace }}/conf/{{ project_name }}_uwsgi.ini'
+    force: true
+  become: true
+
+- name: 'Conf supervisor for {{ project_name }}'
+  template:
+    src: custom_supervisor.conf.j2
+    dest: '{{ my_workplace }}/conf/{{ project_name }}_supervisor.conf'
+    force: true
+  become: true

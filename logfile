@@ -1,0 +1,148 @@
+2017-07-05 11:56:21,942 p=22967 u=wangxiyang |  PLAY [test90] *******************************************************************************************************
+2017-07-05 11:56:22,184 p=22967 u=wangxiyang |  TASK [Gathering Facts] **********************************************************************************************
+2017-07-05 11:56:25,100 p=22967 u=wangxiyang |  ok: [172.17.17.190]
+2017-07-05 11:56:25,171 p=22967 u=wangxiyang |  TASK [basic : Create work place "/root/my_workplace"] **************************************************************
+2017-07-05 11:56:25,738 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/root/my_workplace)
+2017-07-05 11:56:26,052 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/root/my_workplace/tmp)
+2017-07-05 11:56:26,410 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/root/my_workplace/conf)
+2017-07-05 11:56:26,420 p=22967 u=wangxiyang |  TASK [basic : Install libselinux-python] ****************************************************************************
+2017-07-05 11:56:35,229 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 11:56:35,239 p=22967 u=wangxiyang |  TASK [basic : Check repo.back] **************************************************************************************
+2017-07-05 11:56:35,717 p=22967 u=wangxiyang |  ok: [172.17.17.190]
+2017-07-05 11:56:35,727 p=22967 u=wangxiyang |  TASK [basic : Back origin CentOS-Base.repo] *************************************************************************
+2017-07-05 11:56:36,249 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 11:56:36,256 p=22967 u=wangxiyang |  TASK [basic : Copy aliyun CentOS-Base] ******************************************************************************
+2017-07-05 11:56:37,252 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 11:56:37,258 p=22967 u=wangxiyang |  TASK [basic : Copy aliyun yum epel-repo] ****************************************************************************
+2017-07-05 11:56:38,130 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 11:56:38,134 p=22967 u=wangxiyang |  TASK [basic : Install dependencies for Centos] **********************************************************************
+2017-07-05 11:59:42,181 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=[u'xz', u'git', u'zlib', u'zlib-devel', u'gcc', u'gcc-c++', u'patch', u'readline', u'readline-devel', u'libyaml-devel', u'libffi-devel', u'openssl-devel', u'make', u'bzip2', u'bzip2-devel', u'autoconf', u'automake', u'libtool', u'bison', u'curl', u'sqlite', u'sqlite-devel'])
+2017-07-05 11:59:42,191 p=22967 u=wangxiyang |  TASK [python : Copy Python-2.7.13] **********************************************************************************
+2017-07-05 11:59:45,441 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 11:59:45,455 p=22967 u=wangxiyang |  TASK [python : Extract Python-2.7.13] *******************************************************************************
+2017-07-05 11:59:51,050 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 11:59:51,060 p=22967 u=wangxiyang |  TASK [python : Configure Makefile] **********************************************************************************
+2017-07-05 12:00:05,617 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:00:05,625 p=22967 u=wangxiyang |  TASK [python : Make and Make install python] ************************************************************************
+2017-07-05 12:01:26,896 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:01:26,914 p=22967 u=wangxiyang |  TASK [python : Copy virtualenv-15.1.0] ******************************************************************************
+2017-07-05 12:01:28,457 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:01:28,463 p=22967 u=wangxiyang |  TASK [python : Extract virtualenv-15.1.0] ***************************************************************************
+2017-07-05 12:01:29,408 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:01:29,413 p=22967 u=wangxiyang |  TASK [python : Install virtualenv-15.1.0] ***************************************************************************
+2017-07-05 12:01:29,824 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:01:29,834 p=22967 u=wangxiyang |  TASK [python : debug] ***********************************************************************************************
+2017-07-05 12:01:29,879 p=22967 u=wangxiyang |  ok: [172.17.17.190] => {
+    "changed": false, 
+    "debug_venv": {
+        "changed": true, 
+        "cmd": "/root/my_workplace/python_path/bin/python /tmp/virtualenv-15.1.0/setup.py install",
+        "delta": "0:00:00.049126", 
+        "end": "2017-06-13 02:51:34.041357", 
+        "rc": 0, 
+        "start": "2017-06-13 02:51:33.992231", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "running install\nrunning build\nrunning build_py\ncreating build\ncreating build/lib\ncopying virtualenv.py -> build/lib\ncreating build/lib/virtualenv_support\ncopying virtualenv_support/__init__.py -> build/lib/virtualenv_support\ncopying virtualenv_support/pip-9.0.1-py2.py3-none-any.whl -> build/lib/virtualenv_support\ncopying virtualenv_support/wheel-0.29.0-py2.py3-none-any.whl -> build/lib/virtualenv_support\ncopying virtualenv_support/setuptools-28.8.0-py2.py3-none-any.whl -> build/lib/virtualenv_support\ncopying virtualenv_support/argparse-1.4.0-py2.py3-none-any.whl -> build/lib/virtualenv_support\nrunning build_scripts\ncreating build/scripts-2.7\ncopying and adjusting scripts/virtualenv -> build/scripts-2.7\nchanging mode of build/scripts-2.7/virtualenv from 644 to 755\nrunning install_lib\ncreating /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support\ncopying build/lib/virtualenv_support/__init__.py -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support\ncopying build/lib/virtualenv_support/pip-9.0.1-py2.py3-none-any.whl -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support\ncopying build/lib/virtualenv_support/wheel-0.29.0-py2.py3-none-any.whl -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support\ncopying build/lib/virtualenv_support/setuptools-28.8.0-py2.py3-none-any.whl -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support\ncopying build/lib/virtualenv_support/argparse-1.4.0-py2.py3-none-any.whl -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support\ncopying build/lib/virtualenv.py -> /root/my_workplace/python_path/lib/python2.7/site-packages\nbyte-compiling /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support/__init__.py to __init__.pyc\nbyte-compiling /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv.py to virtualenv.pyc\nrunning install_scripts\ncopying build/scripts-2.7/virtualenv -> /root/my_workplace/python_path/bin\nchanging mode of /root/my_workplace/python_path/bin/virtualenv to 755\nrunning install_egg_info\nWriting /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv-15.1.0-py2.7.egg-info",
+        "stdout_lines": [
+            "running install", 
+            "running build", 
+            "running build_py", 
+            "creating build", 
+            "creating build/lib", 
+            "copying virtualenv.py -> build/lib", 
+            "creating build/lib/virtualenv_support", 
+            "copying virtualenv_support/__init__.py -> build/lib/virtualenv_support", 
+            "copying virtualenv_support/pip-9.0.1-py2.py3-none-any.whl -> build/lib/virtualenv_support", 
+            "copying virtualenv_support/wheel-0.29.0-py2.py3-none-any.whl -> build/lib/virtualenv_support", 
+            "copying virtualenv_support/setuptools-28.8.0-py2.py3-none-any.whl -> build/lib/virtualenv_support", 
+            "copying virtualenv_support/argparse-1.4.0-py2.py3-none-any.whl -> build/lib/virtualenv_support", 
+            "running build_scripts", 
+            "creating build/scripts-2.7", 
+            "copying and adjusting scripts/virtualenv -> build/scripts-2.7", 
+            "changing mode of build/scripts-2.7/virtualenv from 644 to 755", 
+            "running install_lib", 
+            "creating /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support",
+            "copying build/lib/virtualenv_support/__init__.py -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support",
+            "copying build/lib/virtualenv_support/pip-9.0.1-py2.py3-none-any.whl -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support",
+            "copying build/lib/virtualenv_support/wheel-0.29.0-py2.py3-none-any.whl -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support",
+            "copying build/lib/virtualenv_support/setuptools-28.8.0-py2.py3-none-any.whl -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support",
+            "copying build/lib/virtualenv_support/argparse-1.4.0-py2.py3-none-any.whl -> /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support",
+            "copying build/lib/virtualenv.py -> /root/my_workplace/python_path/lib/python2.7/site-packages",
+            "byte-compiling /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv_support/__init__.py to __init__.pyc",
+            "byte-compiling /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv.py to virtualenv.pyc",
+            "running install_scripts", 
+            "copying build/scripts-2.7/virtualenv -> /root/my_workplace/python_path/bin",
+            "changing mode of /root/my_workplace/python_path/bin/virtualenv to 755",
+            "running install_egg_info", 
+            "Writing /root/my_workplace/python_path/lib/python2.7/site-packages/virtualenv-15.1.0-py2.7.egg-info"
+        ]
+    }
+}
+2017-07-05 12:01:29,882 p=22967 u=wangxiyang |  TASK [create_env : Manually create the initial virtualenv] **********************************************************
+2017-07-05 12:01:36,762 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:01:36,775 p=22967 u=wangxiyang |  TASK [create_env : Check for ~/.pip/pip.conf] ***********************************************************************
+2017-07-05 12:01:37,348 p=22967 u=wangxiyang |  ok: [172.17.17.190]
+2017-07-05 12:01:37,352 p=22967 u=wangxiyang |  TASK [create_env : Create base directory] ***************************************************************************
+2017-07-05 12:01:37,840 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:01:37,851 p=22967 u=wangxiyang |  TASK [create_env : Add pip.conf to PATH] ****************************************************************************
+2017-07-05 12:01:38,843 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:01:38,847 p=22967 u=wangxiyang |  TASK [mysql : Install mysql and dependencies] ***********************************************************************
+2017-07-05 12:02:15,051 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=[u'mysql-server', u'mysql-devel', u'MySQL-python'])
+2017-07-05 12:02:15,063 p=22967 u=wangxiyang |  TASK [mysql : Start the mysql services] *****************************************************************************
+2017-07-05 12:02:18,021 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:02:18,025 p=22967 u=wangxiyang |  TASK [mysql : update mysql root password for all root accounts] *****************************************************
+2017-07-05 12:02:18,960 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=%)
+2017-07-05 12:02:19,397 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=127.0.0.1)
+2017-07-05 12:02:19,971 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=localhost)
+2017-07-05 12:02:19,981 p=22967 u=wangxiyang |  TASK [mysql : Open 3306 for iptables] *******************************************************************************
+2017-07-05 12:02:20,622 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/sbin/iptables -I INPUT -p tcp --dport 3306 -j ACCEPT)
+2017-07-05 12:02:21,496 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/etc/rc.d/init.d/iptables save)
+2017-07-05 12:02:22,313 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/etc/init.d/iptables restart)
+2017-07-05 12:02:22,321 p=22967 u=wangxiyang |  TASK [mysql : Create the database's] ********************************************************************************
+2017-07-05 12:02:23,035 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=domyprototype)
+2017-07-05 12:02:23,042 p=22967 u=wangxiyang |  TASK [mysql : Create the database users] ****************************************************************************
+2017-07-05 12:02:23,482 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item={u'host': u'%', u'pass': 123456, u'name': u'wxy', u'priv': u'*.*:ALL'})
+2017-07-05 12:02:23,493 p=22967 u=wangxiyang |  TASK [mysql : Dump  database from 60.205.218.205] *******************************************************************
+2017-07-05 12:02:24,877 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:02:24,881 p=22967 u=wangxiyang |  TASK [mysql : Import db to new database] ****************************************************************************
+2017-07-05 12:02:25,594 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:02:25,600 p=22967 u=wangxiyang |  TASK [nginx_uwsgi_supervisor : Install nginx] ***********************************************************************
+2017-07-05 12:03:10,965 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:03:10,983 p=22967 u=wangxiyang |  TASK [nginx_uwsgi_supervisor : Install uwsgi and supervisor into /root/my_workplace/domyprototype_venv] ************
+2017-07-05 12:03:35,747 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=uwsgi)
+2017-07-05 12:03:38,623 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=supervisor)
+2017-07-05 12:03:38,631 p=22967 u=wangxiyang |  TASK [nginx_uwsgi_supervisor : Open iptables port 80 9001] **********************************************************
+2017-07-05 12:03:39,401 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT)
+2017-07-05 12:03:40,118 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/sbin/iptables -I INPUT -p tcp --dport 9001 -j ACCEPT)
+2017-07-05 12:03:41,295 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/etc/rc.d/init.d/iptables save)
+2017-07-05 12:03:42,405 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=/etc/init.d/iptables restart)
+2017-07-05 12:03:42,416 p=22967 u=wangxiyang |  TASK [django : Conf nginx for domyprototype] ************************************************************************
+2017-07-05 12:03:44,214 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:03:44,220 p=22967 u=wangxiyang |  TASK [django : Conf uwsgi for domyprototype] ************************************************************************
+2017-07-05 12:03:45,462 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:03:45,470 p=22967 u=wangxiyang |  TASK [django : Conf supervisor for domyprototype] *******************************************************************
+2017-07-05 12:03:46,482 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:03:46,495 p=22967 u=wangxiyang |  TASK [django : Git update domyprototype from github] ****************************************************************
+2017-07-05 12:03:56,003 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:03:56,012 p=22967 u=wangxiyang |  TASK [django : Django project settings] *****************************************************************************
+2017-07-05 12:03:57,571 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:03:57,577 p=22967 u=wangxiyang |  TASK [django : Update python dependencies] **************************************************************************
+2017-07-05 12:04:24,283 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:04:24,294 p=22967 u=wangxiyang |  TASK [django : Start nginx] *****************************************************************************************
+2017-07-05 12:04:25,400 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:04:25,404 p=22967 u=wangxiyang |  TASK [django : Start uwsgi by supervisor] ***************************************************************************
+2017-07-05 12:04:26,118 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:04:26,123 p=22967 u=wangxiyang |  TASK [django : Archive media directory] *****************************************************************************
+2017-07-05 12:05:06,848 p=22967 u=wangxiyang |  changed: [172.17.17.190 -> www.wangxiyang.com]
+2017-07-05 12:05:06,861 p=22967 u=wangxiyang |  TASK [django : Unarchive media.tgz to /usr/share/nginx/html/media] **************************************************
+2017-07-05 12:20:58,451 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:20:58,495 p=22967 u=wangxiyang |  TASK [django : Copy /root/my_workplace/domyprototype/static to /usr/share/nginx/html] ******************************
+2017-07-05 12:20:59,552 p=22967 u=wangxiyang |  changed: [172.17.17.190]
+2017-07-05 12:20:59,560 p=22967 u=wangxiyang |  TASK [django : Set selinux context] *********************************************************************************
+2017-07-05 12:20:59,960 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=chcon -R -u system_u /usr/share/nginx/html/static)
+2017-07-05 12:21:00,285 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=chcon -R -t usr_t /usr/share/nginx/html/static)
+2017-07-05 12:21:01,293 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=chcon -R -u system_u /usr/share/nginx/html/media)
+2017-07-05 12:21:02,113 p=22967 u=wangxiyang |  changed: [172.17.17.190] => (item=chcon -R -t usr_t /usr/share/nginx/html/media)
+2017-07-05 12:21:02,119 p=22967 u=wangxiyang |  PLAY RECAP **********************************************************************************************************
+2017-07-05 12:21:02,119 p=22967 u=wangxiyang |  172.17.17.190              : ok=43   changed=39   unreachable=0    failed=0   

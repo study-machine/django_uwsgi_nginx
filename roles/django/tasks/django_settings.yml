@@ -1,0 +1,15 @@
+---
+
+# 更改django工程settings
+- name: Django project settings
+  template:
+    src: django_settings.py.j2
+    dest: '{{ project_dir }}/{{ project_name }}/settings.py'
+
+
+# 更新python依赖
+- name: Update python dependencies
+  pip:
+    requirements: '{{ project_dir }}/requirements.txt'
+    virtualenv: '{{ custom_venv }}'
+  ignore_errors: yes

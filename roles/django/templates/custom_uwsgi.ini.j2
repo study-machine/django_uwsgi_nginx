@@ -1,0 +1,21 @@
+[uwsgi]
+
+# 项目路径
+chdir = {{ my_workplace }}/{{ project_name }}
+# 项目路径下wsgi.py文件位置
+module = {{ project_name }}.wsgi
+# 设置python虚拟环境
+virtualenv = {{ custom_venv }}
+
+# 进程数量
+processes = {{ uwsgi_conf.processes }}
+
+# 本地tcp端口服务，nginx反向代理
+socket = 127.0.0.1:{{ uwsgi_conf.port }}
+
+# 清理生成文件
+vacuum = true
+
+# 允许master进程
+# master = true
+

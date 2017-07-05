@@ -1,0 +1,17 @@
+- name: 'Dump  database from {{ origin_database.host }}'
+  mysql_db:
+    login_host: '{{ origin_database.host }}'
+    login_user: '{{ origin_database.user }}'
+    login_password: '{{ origin_database.pass }}'
+    name: '{{ origin_database.name }}'
+    state: dump
+    target: '{{ my_workplace }}/tmp/{{ origin_database.name }}.sql'
+
+
+- name: Import db to new database
+  mysql_db:
+    login_user: root
+    login_password: '{{ mysql_root_password }}'
+    state: import
+    name: '{{ project_name }}'
+    target: '{{ my_workplace }}/tmp/{{ origin_database.name }}.sql'

@@ -1,0 +1,25 @@
+---
+
+- name: 'Copy Python-{{ python_version }}'
+  copy:
+    src: 'Python-{{ python_version }}.tgz'
+    dest: '{{ my_workplace }}/tmp/Python-{{ python_version }}.tar.gz'
+
+- name: 'Extract Python-{{ python_version }}'
+  unarchive:
+    src: '{{ my_workplace }}/tmp/Python-{{ python_version }}.tar.gz'
+    dest: '{{ my_workplace }}/tmp'
+    copy: no
+    creates: '{{ my_workplace }}/tmp/Python-{{ python_version }}/configure'
+
+- name: Configure Makefile
+  shell: "./configure --prefix={{ python_path }} CFLAGS=-fPIC"
+  args:
+    chdir: '{{ my_workplace }}/tmp/Python-{{ python_version }}/'
+    creates: '{{ my_workplace }}/tmp/Python-{{ python_version }}/Makefile'
+
+- name: Make and Make install python
+  shell: "make && make install"
+  args:
+    chdir: '{{ my_workplace }}/tmp/Python-{{ python_version }}/'
+    creates: '{{ python_path }}/bin/python2.7'

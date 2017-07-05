@@ -1,0 +1,17 @@
+- name: Archive media directory
+  archive:
+    path: /mnt/media
+    dest: /mnt/media/media.tgz
+  delegate_to: www.wangxiyang.com
+
+- name: 'Unarchive media.tgz to {{ nginx_conf.media_path }}'
+  unarchive:
+    src: http://www.wangxiyang.com/media/media.tgz
+    dest: /usr/share/nginx/html
+    remote_src: yes
+
+- name: Set selinux context
+  command: '{{ item }}'
+  with_items:
+     - chcon -R -u system_u /usr/share/nginx/html/media
+     - chcon -R -t usr_t /usr/share/nginx/html/media

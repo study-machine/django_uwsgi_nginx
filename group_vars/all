@@ -1,0 +1,55 @@
+---
+
+#my_server_host: 101.201.236.199
+my_server_host: 172.17.17.190
+
+# 工作路径
+my_workplace: /root/my_workplace
+
+# 项目名称
+project_name: domyprototype
+project_dir: '{{ my_workplace }}/{{ project_name }}'
+
+# Python环境
+python_version: 2.7.13
+virtualenv_version: 15.1.0
+python_path: '{{ my_workplace }}/etc/python'
+custom_venv: '{{ my_workplace }}/virtual/{{ project_name }}_venv'
+
+
+# MySQL
+mysql_host: '{{ my_server_host }}'
+mysql_root_password: Poiu7890
+mysql_db_name: '{{ project_name }}'
+mysql_users:
+     - name: wxy
+       pass: Poiu7890
+       priv: "*.*:ALL"
+       host: '%'
+
+origin_database:
+  host: 60.205.218.205
+  user: root
+  pass: asd123
+  name: prototype
+
+# nginx, uwsgi, supervisor配置
+nginx_conf:
+  listen: 80
+  server_name: '{{ my_server_host }}'
+  media_path: '/usr/share/nginx/html/media'
+  static_path: '/usr/share/nginx/html/static'
+  uwsgi_pass_port: 9000
+
+uwsgi_conf:
+  processes: 5
+  port: '{{ nginx_conf.uwsgi_pass_port }}'
+
+surpervisor_conf:
+  ip: '{{ my_server_host }}'
+  username: wxy
+  password: Poiu7890
+
+email_server: smtp.mxhichina.com
+email_user: machine@wangxiyang.com
+email_password: Wxy123456

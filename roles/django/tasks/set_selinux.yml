@@ -1,0 +1,10 @@
+---
+
+- name: 'Copy {{ project_dir }}/static to /usr/share/nginx/html'
+  command: 'cp -r {{ project_dir }}/static /usr/share/nginx/html/'
+
+- name: Set selinux context
+  command: '{{ item }}'
+  with_items:
+     - chcon -R -u system_u /usr/share/nginx/html/static
+     - chcon -R -t usr_t /usr/share/nginx/html/static

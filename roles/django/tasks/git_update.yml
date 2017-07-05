@@ -1,0 +1,11 @@
+---
+
+
+- name: 'Git update {{ project_name }} from github'
+  git:
+    repo: 'https://github.com/study-machine/{{ project_name }}.git'
+    dest: '{{ project_dir }}'
+    force: yes
+
+
+

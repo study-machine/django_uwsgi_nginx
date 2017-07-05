@@ -1,0 +1,12 @@
+---
+
+- name: Install mysql and dependencies
+  yum: 
+    name: '{{ item }}'
+    update_cache: yes
+  with_items:
+    - mysql-server
+    - mysql-devel
+    # MySQL-python是ansible的mysql模块依赖的
+    - MySQL-python
+  become: yes

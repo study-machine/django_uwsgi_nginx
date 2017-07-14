@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 
-.tgz
-.tar.gz
+#.tgz
+#.tar.gz
 .retry
 all.back
 hosts

@@ -4,25 +4,8 @@
     <list default="true" id="e3c881fa-76e4-4f6b-8ded-20a1f49b74a1" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/keymaps/Mac OS X 10_5_ copy.xml" />
       <change type="NEW" beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/window.state.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/nginx_uwsgi_supervisor/templates/default.conf.j2" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../weixinlittleapp/damai_demo/.idea/modules.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ansible.cfg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hosts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.yml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/group_vars/all" afterPath="$PROJECT_DIR$/group_vars/all" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/django/tasks/git_update.yml" afterPath="$PROJECT_DIR$/roles/django/tasks/git_update.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/django/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/django/tasks/main.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/django/tasks/migrate_django_media.yml" afterPath="$PROJECT_DIR$/roles/django/tasks/migrate_django_media.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/django/tasks/set_selinux.yml" afterPath="$PROJECT_DIR$/roles/django/tasks/set_selinux.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/django/templates/custom_supervisor.conf.j2" afterPath="$PROJECT_DIR$/roles/django/templates/custom_supervisor.conf.j2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/django/templates/custom_uwsgi.ini.j2" afterPath="$PROJECT_DIR$/roles/django/templates/custom_uwsgi.ini.j2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/nginx_uwsgi_supervisor/tasks/install.yml" afterPath="$PROJECT_DIR$/roles/nginx_uwsgi_supervisor/tasks/install.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.yml" afterPath="$PROJECT_DIR$/start.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,17 +43,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state relative-caret-position="58">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="3" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -223,8 +206,8 @@
         <option value="$PROJECT_DIR$/group_vars/all.back" />
         <option value="$PROJECT_DIR$/logfile" />
         <option value="$PROJECT_DIR$/group_vars/all" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -453,12 +436,12 @@
       <workItem from="1498725913345" duration="33360000" />
       <workItem from="1499236413777" duration="1643000" />
       <workItem from="1499238095715" duration="3985000" />
-      <workItem from="1499997606200" duration="1059000" />
+      <workItem from="1499997606200" duration="1497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40360000" />
+    <option name="totallyTimeSpent" value="40798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="799" extended-state="6" />
@@ -470,7 +453,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496464" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24186705" sideWeight="0.5310245" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -883,14 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -899,6 +874,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="3" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

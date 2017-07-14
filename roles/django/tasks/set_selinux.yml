@@ -1,10 +1,15 @@
 ---
 
-- name: 'Copy {{ project_dir }}/static to /usr/share/nginx/html'
-  command: 'cp -r {{ project_dir }}/static /usr/share/nginx/html/'
+- name: check selinux has enabled
+  command: getenforce
+  register: has_selinux
+
 
 - name: Set selinux context
   command: '{{ item }}'
   with_items:
      - chcon -R -u system_u /usr/share/nginx/html/static
      - chcon -R -t usr_t /usr/share/nginx/html/static
+     - chcon -R -u system_u /usr/share/nginx/html/media
+     - chcon -R -t usr_t /usr/share/nginx/html/media
+  when: has_selinux.stdout=='Enforcing'

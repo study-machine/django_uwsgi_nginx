@@ -2,6 +2,9 @@
 
 .tgz
 .tar.gz
-
-
 .retry
+all.back
+hosts
+logfile
+test.yml
+ansible.cfg

@@ -20,7 +20,7 @@ file=/tmp/supervisor.sock   ; the path to the socket file
 ;password=123               ; default is no password (open server)
 
 [inet_http_server]         ; inet (TCP) server disabled by default
-port={{ surpervisor_conf.ip }}:9001        ; ip_address:port specifier, *:port for all iface
+port=0.0.0.0:9001        ; ip_address:port specifier, *:port for all iface
 username={{ surpervisor_conf.username }}              ; default is no username (open server)
 password={{ surpervisor_conf.password }}               ; default is no password (open server)
 
@@ -153,3 +153,4 @@ autostart=true
 startsecs=5
 stdout_logfile=/tmp/supervisor_{{ project_name }}_stdout.log
 stderr_logfile=/tmp/supervisor_{{ project_name }}_stderr.log
+stopsignal=QUIT

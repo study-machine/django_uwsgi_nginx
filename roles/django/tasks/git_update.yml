@@ -1,11 +1,12 @@
 ---
 
-
 - name: 'Git update {{ project_name }} from github'
   git:
     repo: 'https://github.com/study-machine/{{ project_name }}.git'
     dest: '{{ project_dir }}'
     force: yes
 
+- name: 'Copy {{ project_dir }}/static to /usr/share/nginx/html'
+  command: 'cp -r {{ project_dir }}/static /usr/share/nginx/html'
 
 

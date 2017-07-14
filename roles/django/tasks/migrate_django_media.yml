@@ -9,9 +9,3 @@
     src: http://www.wangxiyang.com/media/media.tgz
     dest: /usr/share/nginx/html
     remote_src: yes
-
-- name: Set selinux context
-  command: '{{ item }}'
-  with_items:
-     - chcon -R -u system_u /usr/share/nginx/html/media
-     - chcon -R -t usr_t /usr/share/nginx/html/media

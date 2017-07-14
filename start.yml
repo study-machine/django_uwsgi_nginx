@@ -1,6 +1,6 @@
 ---
 
-- hosts: test90
+- hosts: newaliyun
   remote_user: root
 
   roles:

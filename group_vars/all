@@ -1,13 +1,12 @@
 ---
 
-#my_server_host: 101.201.236.199
-my_server_host: 172.17.17.190
+my_server_host: xxx.xxx.xxx.xxx
 
 # 工作路径
 my_workplace: /root/my_workplace
 
 # 项目名称
-project_name: domyprototype
+project_name: xxx_project
 project_dir: '{{ my_workplace }}/{{ project_name }}'
 
 # Python环境
@@ -19,19 +18,20 @@ custom_venv: '{{ my_workplace }}/virtual/{{ project_name }}_venv'
 
 # MySQL
 mysql_host: '{{ my_server_host }}'
-mysql_root_password: Poiu7890
+mysql_root_password: xxxxxx
 mysql_db_name: '{{ project_name }}'
 mysql_users:
-     - name: wxy
-       pass: Poiu7890
+     - name: xxxxxx
+       pass: xxxxxx
        priv: "*.*:ALL"
        host: '%'
 
+# 迁移源数据库
 origin_database:
-  host: 60.205.218.205
-  user: root
-  pass: asd123
-  name: prototype
+  host: xxx.xxx.xxx.xxx
+  user: xxx
+  pass: xxx
+  name: xxx_project
 
 # nginx, uwsgi, supervisor配置
 nginx_conf:
@@ -46,10 +46,9 @@ uwsgi_conf:
   port: '{{ nginx_conf.uwsgi_pass_port }}'
 
 surpervisor_conf:
-  ip: '{{ my_server_host }}'
-  username: wxy
-  password: Poiu7890
+  username: xxxxxx
+  password: xxxxxx
 
-email_server: smtp.mxhichina.com
-email_user: machine@wangxiyang.com
-email_password: Wxy123456
+email_server: smtp.xxxxxx.com
+email_user: xxxxxx@xxxxxx.com
+email_password: xxxxxx
